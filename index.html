@@ -50,11 +50,15 @@
         box-shadow: 2px 2px 10px #d0c7c7;
     }
         @media(min-width:768px){
-            .labels, .data{display: inline-block;}
-            .labels{ width:39%;}
-            .data{width: 60%;}
+            .labels, .data{
+                padding: 5px;
+                display: inline-block;
+            }
+            .labels{ text-align:right;
+                width:38%;}
+            .data{width: 58%;}
         }
-        
+        .data input{width: 80%;}
     </style>
     </head>
     
@@ -71,6 +75,18 @@
                     </div>
                     <div class="data">
                         <input type="text" placeholder="Enter Full Name" id="name" required>
+                    </div>
+                    <div class="labels">
+                        <label id="email-label" for="email">Email *</label>
+                    </div>
+                    <div class="data">
+                        <input type="email" placeholder="Enter Email Address" id="email" required>
+                    </div>
+                    <div class="labels">
+                        <label id="number-label" for="number">Age*</label>
+                    </div>
+                    <div class="data">
+                        <input type="number" placeholder="Enter Age" id="number" min="1" max="100">
                     </div>
                 </form>
             </div>
