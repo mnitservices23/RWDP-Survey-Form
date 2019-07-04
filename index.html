@@ -59,7 +59,11 @@
             .data{width: 58%;}
         }
         .data input{width: 80%;}
+        input[type="radio"] {    width: 25%;}
+        input[type="checkbox"] {    width: 14px;}
     </style>
+    
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </head>
     
     <body>
@@ -74,20 +78,57 @@
                         <label id="name-label" for="name">Name *</label>
                     </div>
                     <div class="data">
-                        <input type="text" placeholder="Enter Full Name" id="name" required>
+                        <input type="text" placeholder="Enter Full Name" name="name" id="name" required>
                     </div>
                     <div class="labels">
                         <label id="email-label" for="email">Email *</label>
                     </div>
                     <div class="data">
-                        <input type="email" placeholder="Enter Email Address" id="email" required>
+                        <input type="email" name="email" placeholder="Enter Email Address" id="email" required>
                     </div>
                     <div class="labels">
-                        <label id="number-label" for="number">Age*</label>
+                        <label id="number-label" for="age">Age*</label>
                     </div>
                     <div class="data">
-                        <input type="number" placeholder="Enter Age" id="number" min="1" max="100">
+                        <input type="number" name="age" placeholder="Enter Age" id="number" min="1" max="100">
                     </div>
+                    <div class="labels">
+                        <label id="education-label" for="eduction-level">What level of Education Do have?</label>
+                    </div>
+                    <div class="data">
+                        <select name="education-level" id="drop-down">
+                            <option value="bachelors">Bachelors Degree</option>
+                            <option value="associates" >Associates Degree</option>
+                            <option value="highscool">Highschool Diploma</option>
+                        </select>
+                    </div>
+                    
+                    <div class="labels">
+                        <label for="radio-buttons">Do think a University degree is Worth it?</label>
+                    </div>
+                    <div class="data">
+                       <label>Yes <input type="radio" name="radio-buttons" value="yes"></label>
+                        
+                        <label>No <input type="radio" name="radio-buttons" value="no"></label>
+                    </div>
+                    
+                                
+                    <div class="labels">
+                        <label for="checkboxes">What Skills do you think are better than a degree?</label>
+                    </div>
+                    <div class="data">
+                       <label><input type="checkbox" name="checkboxes" value="Web Dev">Web Development</label>
+                        <label>No <input type="checkbox" name="checkboxes" value="Web Design">Web Design</label>
+                         <label>No <input type="checkbox" name="checkboxes" value="Acc">Accounting</label>
+                    </div>
+                    
+                    <div class="labels">
+                        <label for="comments">Additional ideas</label>
+                    </div>
+                    <div class="data">
+                        <textarea type="textarea" name="comments" placeholder="Tell us more about this topic" ></textarea>
+                    </div>
+                       <button id="submit" type="submit">Submit</button>
                 </form>
             </div>
         </div>
